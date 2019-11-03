@@ -1,0 +1,127 @@
+/* styles */
+/* called by your view template */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+
+h1 {
+  font-family: Orbitron;
+  font-weight: bold;
+  font-size: 32px;
+  color: rgba(95, 20, 150, 0.9);
+  text-align: center;
+  padding: 35px 0px;
+  border-bottom: 5px double rgba(10,50,70,0.5);
+}
+
+h3 {
+  font-family: Electrolize;
+  text-align: center;
+  color: rgba(95, 20, 150, 0.95);
+  padding: 20px 10px 50px 10px;
+
+}
+
+#container {
+  margin: 0 14%;
+  line-height: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+br {
+  margin: 10px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;  
+}
+
+i {
+  margin: 0 5px;  
+}
+
+.row {
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.column {
+  background-color:	rgb(175,238,238);
+}
+
+p {
+  margin: 40px 0;  
+}
+
+form {
+  border: 2px solid rgba(95, 20, 150, 0.9);
+  text-align: center;
+  font-family: Coda;
+}
+
+fieldset {
+  color: teal;
+  text-shadow: 2px 2px white;
+  margin: 10px; 
+  padding: 10px;
+  border: 2px groove darkturquoise;
+  border-radius: 3px;
+}
+
+legend {
+  padding: 0 5px;
+}
+
+input {
+  font-family: Coda;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  background-color: rgb(240,255,255);
+  margin: 2px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: limegreen;
+}
+
+footer {
+  font-family: Abel;
+  font-size: 16px;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 5px double rgba(10,50,70,0.5);
+  text-align: center;
+  padding: 10px;
+}
+
+#footer-row1 {
+  margin: 10px;
+}

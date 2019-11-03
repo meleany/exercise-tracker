@@ -1,0 +1,108 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise Tracker</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+        
+    <!-- import Google fonts and awesome icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">        
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet" type="text/css">        
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">   
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet" type="text/css">   
+
+  </head>
+  
+  <body>
+    
+    <div id="container">
+      <h1>Exercise Tracker</h1>
+      <h3>FreeCodeCamp APIs & Microservices Project</h3>
+      <div class="row">
+        <div class="column">
+          <form action="api/exercise/new-user" method="POST">
+            <fieldset>
+              <legend>Register new user</legend>
+              <input id="newuser" type="text" name="username" placeholder="username" required>
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+        </div>
+        <div class="column">
+          <form action="api/exercise/add" method="POST">
+            <fieldset>
+              <legend>Record new exercise</legend>
+              <input type="text" name="userId" placeholder="userId" required>
+              <input type="text" name="description" placeholder="Description" required>
+              <input type="number" name="duration" placeholder="Duration (mins.)" required min="1">
+              <input type="date" name="date" placeholder="Date (yyyy-mm-dd)">
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      
+      <p>
+        The Exercise Tracker app can be used to track the exercise history -including type, duration and date- of a given user. Use
+        the above submitting forms to create a new user or to add exercise details to an existent one.
+      </p>   
+      
+      <ul>
+        <li> I can POST a form data username to <code>[project_url]/api/exercise/new-user</code>. In return I will receive a JSON response
+          containing the username and _id. <br>
+          Example: <code>{username:"Theusername", _id:1424ds}</code>
+        </li>
+        <li>I can use the API end point GET <code>[project_url]/api/exercise/users</code> to obtain an array of all registered users and their 
+          _id.        
+        </li>
+        <li>I can POST a form data to <code>[project_url]/api/exercise/add</code> to add information to any registered user. The userId(_id), 
+          exercise and duration are mandatory fields while date is optional. If date is not supplied, the app will use the date at the moment of 
+          submission.
+        </li>
+        <li>I can use the API end point GET <code>[project_url]/api/exercise/log</code> with a parameter of userId(_id) to retrieve the user 
+          object with added array log and count (total exercise count).
+        </li>
+        <li>The POST of the form exercise will return a JSON response containing all the information for the given userId(_id).
+        </li>
+        <li>I can retrieve part of the log of any user by also passing along optional parameters of from & to or limit. (Date format yyyy-mm-dd, 
+          limit = int). <br>
+          <code> GET [project_url]/api/exercise/log?{userId}[&from][&to][&limit] </code> <br>
+          <b>{ }</b> = required, <b>[ ]</b> = optional <br>
+          <b>from, to</b> = dates (yyyy-mm-dd); <b>limit</b> = integer number
+        </li>
+      </ul>
+      
+    </div>
+<!-- 
+6.    
+-->    
+    <footer>
+      <div id="footer-row1">
+        <a class="button" href="https://www.freecodecamp.com/meleany" target="_blank"> <i class="fa fa-free-code-camp fa-2x fa-fw"></i> </a> 
+        <a class="button" href="https://github.com/meleany" target="_blank"> <i class="fa fa-github-alt fa-2x fa-fw"></i> </a>
+        <a class="button" href="https://codepen.io/meleany" target="_blank"> <i class="fa fa-codepen fa-2x fa-fw"></i> </a>
+        <a class="button" href="https://ymelbart.wordpress.com/" target="_blank"> <i class="fa fa-wordpress fa-2x fa-fw"></i> </a>
+      </div>
+      <div id="footer-row2">
+        Yasmin Melean &copy 2019. All rights reserved.
+      </div>
+    </footer> 
+
+  </body>
+  
+</html>
